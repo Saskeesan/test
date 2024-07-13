@@ -1,0 +1,254 @@
+/* General Styles */
+body {
+    font-family: 'Roboto Slab';
+    margin: 0;
+    padding: 0;
+    background: #222222;
+    color: white;
+}
+
+header,
+
+footer {
+    background: #222222;
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+}
+
+header h1,
+footer p {
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 1em;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    height: 100vh;
+}
+
+.hero-left {
+    width: 50%;
+    background-color: #222222;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.hero-right {
+    width: 50%;
+    overflow: hidden;
+}
+
+.hero-right img {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+}
+
+.hero-text {
+    text-align: center;
+}
+
+.hero-text h2 {
+    font-size: 3.5em;
+    margin-bottom: 0.5em;
+}
+
+.hero-text p {
+    font-size: 1.2em;
+    margin-bottom: 2em;
+}
+
+.hero-text .button {
+    padding: 0.5em 1em;
+    background: white;
+    color: #222222;
+    text-decoration: none;
+    border-radius: 20px;
+    font-size: 1em;
+}
+
+/* Work Section */
+#work {
+    text-align: center;
+    padding: 2em 0;
+}
+
+#work h2 {
+    font-size: 2em;
+}
+
+.nav-wrapper {
+    position: absolute;
+    /* Positions the navigation relative to the header */
+    top: 20px;
+    /* Adjust this value as needed to position it where you want */
+    left: 20px;
+    /* Adjust this value as needed to position it where you want */
+}
+
+.nav-wrapper ul {
+    list-style-type: none;
+    /* Removes default list styles */
+    padding: 0;
+    margin: 0;
+}
+
+.nav-wrapper ul li {
+    display: inline;
+    /* Displays list items horizontally */
+    margin-right: 20px;
+    /* Adjust spacing between items */
+}
+
+.nav-wrapper ul li a {
+    text-decoration: none;
+    color: white;
+    /* Adjust link color as needed */
+    font-weight: slim;
+    font-size: 14px;
+    /* Adjust font size as needed */
+}
+
+.portfolio {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.portfolio-item {
+    flex: 50%;
+    /*
+    width: 30%;
+    margin: 1em 0;*/
+    position: relative;
+}
+
+.portfolio-item img {
+    width: 100%;
+    height: 400px;
+    /* Adjust this value as necessary */
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+/*
+.hero-right img {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+}
+*/
+
+
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.6);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.portfolio-item:hover .overlay {
+    display: flex;
+}
+
+.portfolio-item-text {
+    font-size: 1.2em;
+    color: #333;
+}
+
+/* Contact Section */
+#contact {
+    padding: 2em 0;
+}
+
+#contact form {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+#contact label {
+    display: block;
+    margin: 0.5em 0 0.2em;
+}
+
+#contact input,
+#contact textarea {
+    width: 100%;
+    padding: 0.5em;
+    margin-bottom: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#contact input[type="submit"] {
+    width: auto;
+    background: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 0.5em 1em;
+}
+
+#contact input[type="submit"]:hover {
+    background: #555;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+    }
+
+    .hero-left,
+    .hero-right {
+        width: 100%;
+    }
+
+    .hero-right img {
+        width: 100%;
+        height: auto;
+    }
+
+    .portfolio-item {
+        width: 45%;
+    }
+}
+
+@media (max-width: 480px) {
+    .portfolio-item {
+        width: 100%;
+    }
+}
